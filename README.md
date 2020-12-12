@@ -45,3 +45,6 @@ $ npm install -g firebase-tools
 # deploy
 $ firebase deploy --only functions
 ```
+
+For more information, click on the following link.
+https://firebase.google.com/docs/functions/get-started
