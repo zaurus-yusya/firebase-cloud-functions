@@ -1,15 +1,27 @@
 ## firebase cloud functions test
 
-API testing using express
+API testing using express.
 
 ### GET Method
-Receive the following json
+Return the following json without parameters.
 ```
 # request
 $ curl -X GET <endpoint_url>
 
 # response
-{"name": "zaurus"}
+{"hello":"world"}
+```
+
+Return the following json with a numeric parameter.
+It can be used from 1 to 5.
+```
+# request
+$ curl -X GET <endpoint_url>/1
+$ curl -X GET <endpoint_url>/3
+
+# response
+{"key":1, "value":"one"}
+{"key":3, "value":"three"}
 ```
 
 ### POST Method
@@ -24,6 +36,9 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"User_name":"Zaurus", "A
 
 ## Build
 ```
+# clone
+$ git clone https://github.com/zaurus-yusya/firebase-cloud-functions.git
+
 # install
 $ npm install -g firebase-tools
 
